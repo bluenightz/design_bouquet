@@ -176,6 +176,9 @@
 .btnBC-delete{
 	background:url(img/cross.png) no-repeat;
 }
+.btnBC-dash {
+	background: url(img/dash.png) no-repeat;
+}
 .btnBC-plus{
 	background:url(img/plus.png) no-repeat;
 }

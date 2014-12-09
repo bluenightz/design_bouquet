@@ -1,3 +1,4 @@
+// add comment
 Snap.plugin(function (Snap, Element, Paper, global, Fragment) {
     //Snap.newmethod = function () {};
     Element.prototype._RotationBox = null;
@@ -288,7 +289,7 @@ aj.auto_customer = function(){
 				}
 			});	
 }
-
+// add comment
 function cutmath( _num ){
 
     var r = Math.round(_num * 100) / 100
@@ -587,25 +588,75 @@ $(function(){
         }
 
         _this.updateprice = function(){
-            var _t = cutmath(_this.getallprice())
+            var _setupprice = Number( $("#setupprice").val() );
+            var _t = cutmath(_this.getallprice());
+            var _product_setup = _t + _setupprice;
+            var totalprice = Number(Number(_t - (_t*0.07)).toFixed(2));
+            var _discount, _afterdiscount;
 
-           $("#totalprice").val( Number(_t - (_t*0.07)).toFixed(2) );
-		   var 	totalprice = cutmath(_this.getallprice());
-		   var 	vat = Number(parseFloat(totalprice *7 /100).toFixed(2));
-		   console.log('VAT : ' + vat);
-		   $('#vat').val(vat);
-		   //$('#net').val(parseFloat(totalprice+vat).toFixed(2));
-           $('#net').val( _t );
-           $("#total2").html( _t );
+
+
+           //ค่าขนส่งแบบไม่มี vat
+           var _setupnovat = ( $("#setupprice").attr("novat") )? Number($("#setupprice").attr("novat")) : 0;
+
+           //ส่วนลด
+           //_discount = Number(data.price);
+           var _dropdown = $("#promotion_dropdown")[0];
+           _percent = _dropdown.options[_dropdown.selectedIndex].dataset.discount;
+
+           _discount = ( (Number(_t) * Number(_percent)) / 100 ) || 0;
+
+            //โชว์ราคารวมสินค้าไม่รวมvat
+           $("#totalprice").val( totalprice );
+
+           //ผลรวมของราคาสินค้ากับค่าขนส่ง แบบหัก vat ออกแล้ว
+           var _sumprice = totalprice + _setupprice;
+
+           //ราคา net
+           var _final = _t + _setupnovat;
+
+           //vat รวม
+           var _vat = Number( _final - _sumprice ).toFixed(2);
+
+
+            _afterdiscount = _final - _discount;
+
+            $("#discount").val( _discount );
+            $('#sumprice').val( _sumprice );
+            $('#vat').val( _vat );
+            $('#net').val( _afterdiscount );
+
+            // if( _discount != 0 ){
+            //   $(".paydetail #stepdiscount").show();
+            //   $("#pricetarget").text( data.promotion_price );
+            //   $("#discountnum").text( data.promotion_discount+"%" );
+            // }else{
+            //   $(".paydetail #stepdiscount").hide();
+            // }
+
+           // $.ajax({
+           //    "url":"?inc=stock_show-process&Mode=promotion", 
+           //    "type":"POST",
+           //    "dataType":"json",
+           //    "data":{
+           //      price: Number( _t )
+           //    },
+           //    success:function(data){
+
+                
+
+           //    }
+           //  });
+
+           
+
+
         }
 
         _this.getallprice = function(){
             var r = 0;
             for(var i = 0 ; i < _set.length ; ++i){
-                //r += _set[i].total ;
-                for(var a = 0 ; a < _set[i].materialset.length ; ++a){
-                    r += _set[i].materialset[a].price;
-                }
+                r += _set[i].total ;
             }
             return r;
         }
@@ -753,7 +804,7 @@ $(function(){
 
    var _balloonset = new balloonset(); // เก็บ object balloon
 
-
+   $.balloonsetGlobal = _balloonset;
    /** Function : use for create html markup 
    *
    * return jQuery Object : html markup for new material row
@@ -772,13 +823,13 @@ $(function(){
                                 + '<div class="codewrap"><span>'+ opt.fullcode +'</span></div>'
 								+ '<div class="codedetail" style="display:none;">'+ opt.name +'</div>' 
                             + '</td>' 
-                            + '<td class="col4" style="display:none;"><span class="price">'+ opt.price +'</span></td>' 
+                            + '<td class="col4"><span class="price">'+ opt.price +'</span></td>' 
                             + '<td class="col5" style="display:none;"><span class="quantity">'+ opt.quantity +'</span></td>' 
-                            + '<td class="col5" style="display:none;"><span class="gas"><select class="clickable"><option value="Y" rel="'+  opt.pricegas  +'" '+ (opt.gas == 'Y' ? 'selected':'') +'>Yes</option><option value="N" rel="'+  opt.pricenogas  +'" '+ (opt.gas == 'N' ? 'selected':'') +'>No</option></select></span></td>' 
+                            + '<td class="col5"><span class="gas"><select class="clickable"><option value="Y" rel="'+  opt.pricegas  +'" '+ (opt.gas == 'Y' ? 'selected':'') +'>Yes</option><option value="N" rel="'+  opt.pricenogas  +'" '+ (opt.gas == 'N' ? 'selected':'') +'>No</option></select></span></td>' 
                             + '<td class="col5" style="display:none;"><span class="matallprice" style="display:none;">'+ cutmath(opt.price * opt.quantity) +'</span></td>'
                             + '<td class="col6" style="display:none;"><div class="btnBC btnBC-up"></div></td>' 
                             + '<td class="col7"><div class="btnBC clickable btnBC-plus"></div></td>' 
-                            + '<td class="col8"><div class="btnBC clickable btnBC-delete"></div></td>' 
+                            + '<td class="col8"><div class="btnBC clickable btnBC-dash"></div></td>' 
                            + '<td class="spacetd">&nbsp;</td>' 
                             + '<td class="col10 lasttd"><span class="price">'+ opt.price +'</span></td>' 
                             + '<td class="spacetd lasttd" style="display:none;">&nbsp;</td>' 
