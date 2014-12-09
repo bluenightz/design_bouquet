@@ -33,166 +33,166 @@ String.prototype.convertToEN = function(){
 */
 var aj = {};
 aj.jqueryUi = function(){
-	$('link[href="view/balloonart/css/main_style.css"]').before('<link rel="stylesheet" href="view/balloonart/css/jquery-ui-1.10.4.custom.min.css">'
-	+'<link rel="stylesheet" href="view/balloonart/css/jquery.ui.timepicker.css">');
-	
-	$('script[src="view/balloonart/js/main_script.js"]').before('<script src="view/balloonart/js/jquery-ui-1.10.4.custom.min.js"></script>'
-	+'<script src="view/balloonart/js/jquery.ui.timepicker.js"></script>');
-	
-	aj.auto_customer();
+  $('link[href="view/balloonart/css/main_style.css"]').before('<link rel="stylesheet" href="view/balloonart/css/jquery-ui-1.10.4.custom.min.css">'
+  +'<link rel="stylesheet" href="view/balloonart/css/jquery.ui.timepicker.css">');
+  
+  $('script[src="view/balloonart/js/main_script.js"]').before('<script src="view/balloonart/js/jquery-ui-1.10.4.custom.min.js"></script>'
+  +'<script src="view/balloonart/js/jquery.ui.timepicker.js"></script>');
+  
+  aj.auto_customer();
 }
 //:: QOUTATION CUSTOMER AUTOCOMPLETE :://
 aj.auto_customer = function(){
-	$('#cust_name').autocomplete({
-		source:'?inc=index-process&Mode=AutoCustomer',
-		minLength: 1,
-		select: function( event, ui){
-			$('#cust_id').val(ui.item.customer_no);
-			$('#cust_name').val(ui.item.customer_name);
-			$('#cust_email').val(ui.item.customer_email);
-			$('#cust_company').val(ui.item.customer_company);
-			$('#cust_address').val(ui.item.customer_address);
-			$('#cust_phone').val(ui.item.customer_tel);
-			$('#cust_mobile').val(ui.item.customer_mobile);
-			$('#cust_fax').val(ui.item.customer_fax);
-		}
-	});
-	
-	$('#cust_email').autocomplete({
-		source:'?inc=index-process&Mode=AutoEmail',
-		minLength: 1,
-		select: function( event, ui){
-			$('#cust_id').val(ui.item.customer_no);
-			$('#cust_name').val(ui.item.customer_name);
-			$('#cust_email').val(ui.item.customer_email);
-			$('#cust_company').val(ui.item.customer_company);
-			$('#cust_address').val(ui.item.customer_address);
-			$('#cust_phone').val(ui.item.customer_tel);
-			$('#cust_mobile').val(ui.item.customer_mobile);
-			$('#cust_fax').val(ui.item.customer_fax);
-		}
-	});
-	
-	$('#cust_company').autocomplete({
-		source:'?inc=index-process&Mode=AutoCompany',
-		minLength: 1,
-		select: function( event, ui){
-			$('#cust_id').val(ui.item.customer_no);
-			$('#cust_name').val(ui.item.customer_name);
-			$('#cust_email').val(ui.item.customer_email);
-			$('#cust_company').val(ui.item.customer_company);
-			$('#cust_address').val(ui.item.customer_address);
-			$('#cust_phone').val(ui.item.customer_tel);
-			$('#cust_mobile').val(ui.item.customer_mobile);
-			$('#cust_fax').val(ui.item.customer_fax);
-		}
-	});
-	
-	$('#cust_phone').autocomplete({
-		source:'?inc=index-process&Mode=AutoPhone',
-		minLength: 1,
-		select: function( event, ui){
-			$('#cust_id').val(ui.item.customer_no);
-			$('#cust_name').val(ui.item.customer_name);
-			$('#cust_email').val(ui.item.customer_email);
-			$('#cust_company').val(ui.item.customer_company);
-			$('#cust_address').val(ui.item.customer_address);
-			$('#cust_phone').val(ui.item.customer_tel);
-			$('#cust_mobile').val(ui.item.customer_mobile);
-			$('#cust_fax').val(ui.item.customer_fax);
-		}
-	});
-	
-	$('#cust_mobile').autocomplete({
-		source:'?inc=index-process&Mode=AutoTel',
-		minLength: 1,
-		select: function( event, ui){
-			$('#cust_id').val(ui.item.customer_no);
-			$('#cust_name').val(ui.item.customer_name);
-			$('#cust_email').val(ui.item.customer_email);
-			$('#cust_company').val(ui.item.customer_company);
-			$('#cust_address').val(ui.item.customer_address);
-			$('#cust_phone').val(ui.item.customer_tel);
-			$('#cust_mobile').val(ui.item.customer_mobile);
-			$('#cust_fax').val(ui.item.customer_fax);
-		}
-	});
+  $('#cust_name').autocomplete({
+    source:'?inc=index-process&Mode=AutoCustomer',
+    minLength: 1,
+    select: function( event, ui){
+      $('#cust_id').val(ui.item.customer_no);
+      $('#cust_name').val(ui.item.customer_name);
+      $('#cust_email').val(ui.item.customer_email);
+      $('#cust_company').val(ui.item.customer_company);
+      $('#cust_address').val(ui.item.customer_address);
+      $('#cust_phone').val(ui.item.customer_tel);
+      $('#cust_mobile').val(ui.item.customer_mobile);
+      $('#cust_fax').val(ui.item.customer_fax);
+    }
+  });
+  
+  $('#cust_email').autocomplete({
+    source:'?inc=index-process&Mode=AutoEmail',
+    minLength: 1,
+    select: function( event, ui){
+      $('#cust_id').val(ui.item.customer_no);
+      $('#cust_name').val(ui.item.customer_name);
+      $('#cust_email').val(ui.item.customer_email);
+      $('#cust_company').val(ui.item.customer_company);
+      $('#cust_address').val(ui.item.customer_address);
+      $('#cust_phone').val(ui.item.customer_tel);
+      $('#cust_mobile').val(ui.item.customer_mobile);
+      $('#cust_fax').val(ui.item.customer_fax);
+    }
+  });
+  
+  $('#cust_company').autocomplete({
+    source:'?inc=index-process&Mode=AutoCompany',
+    minLength: 1,
+    select: function( event, ui){
+      $('#cust_id').val(ui.item.customer_no);
+      $('#cust_name').val(ui.item.customer_name);
+      $('#cust_email').val(ui.item.customer_email);
+      $('#cust_company').val(ui.item.customer_company);
+      $('#cust_address').val(ui.item.customer_address);
+      $('#cust_phone').val(ui.item.customer_tel);
+      $('#cust_mobile').val(ui.item.customer_mobile);
+      $('#cust_fax').val(ui.item.customer_fax);
+    }
+  });
+  
+  $('#cust_phone').autocomplete({
+    source:'?inc=index-process&Mode=AutoPhone',
+    minLength: 1,
+    select: function( event, ui){
+      $('#cust_id').val(ui.item.customer_no);
+      $('#cust_name').val(ui.item.customer_name);
+      $('#cust_email').val(ui.item.customer_email);
+      $('#cust_company').val(ui.item.customer_company);
+      $('#cust_address').val(ui.item.customer_address);
+      $('#cust_phone').val(ui.item.customer_tel);
+      $('#cust_mobile').val(ui.item.customer_mobile);
+      $('#cust_fax').val(ui.item.customer_fax);
+    }
+  });
+  
+  $('#cust_mobile').autocomplete({
+    source:'?inc=index-process&Mode=AutoTel',
+    minLength: 1,
+    select: function( event, ui){
+      $('#cust_id').val(ui.item.customer_no);
+      $('#cust_name').val(ui.item.customer_name);
+      $('#cust_email').val(ui.item.customer_email);
+      $('#cust_company').val(ui.item.customer_company);
+      $('#cust_address').val(ui.item.customer_address);
+      $('#cust_phone').val(ui.item.customer_tel);
+      $('#cust_mobile').val(ui.item.customer_mobile);
+      $('#cust_fax').val(ui.item.customer_fax);
+    }
+  });
 
-	$('#province').autocomplete({
-		source: function(request, response) {
-			$.ajax({
-				url : '?inc=stock_show-process&Mode=Province',
-				dataType : "json",
-				data : {
-					vehicle : $('#shipping_taxi').val()
-				},
-				success: function(data) {
-					response($.map(data, function(item) {
-						return {
-							label: item.label ,//group_id + "] " + item.group_name,
-							no:item.no,
-							value: item.value,
-							AMPHUR_ID:item.AMPHUR_ID,
-							PROVINCE_ID:item.PROVINCE_ID,
-							shipping:item.DELIVERY
-						}
-					}))
-				}
-			})
-		},
-//		source:
-		minLength: 0,
-		select: function( event, ui){
-			$('#hprovince').val(ui.item.PROVINCE_ID);
-			$('#amphur').attr('readonly',false).focus();
-		}
-	});
-			
-	$('#amphur').autocomplete({
-		source: function(request, response) {
-			$.ajax({
-				url: "?inc=stock_show-process&Mode=Amphur",
-				dataType: "json",
-				data: {
-					ref:$('#hprovince').val(),
-					vehicle : $('#shipping_taxi').val(),
-					office : ($('#motorbike').is(':checked') ?  $('#motorbike').attr('v-data') : $('#car').attr('v-data')),
-					term: request.term
-				},
-				success: function(data) {
-					response($.map(data, function(item) {
-						return {
-							label: item.label +'[' + item.AMP_NAME+' ราคา ' + item.DELIVERY +'บาท]',//group_id + "] " + item.group_name,
-							no:item.no,
-							value: item.value,
-							AMPHUR_ID:item.AMPHUR_ID,
-							shipping:item.DELIVERY,
-							delivery_no:item.DELIVERY_NO
-						}
-					}))
-				}
-			})
-		},
-		minLength: 0,
-		select: function( event, ui){
-			$('#hamphur').val(ui.item.AMPHUR_ID);
-			console.log('Return : '+ ui.item);
-			console.log('Ampur ID : '+ ui.item.AMPHUR_ID);
-			console.log('Shipping ID : '+ ui.item.DELIVERY + '[' + ui.item.shipping +']');
-			$('#form_shipping').attr('data-price',ui.item.shipping);
-			$('#hdelivery_no').val(ui.item.delivery_no);
-			if($('#form_shipping').is(':checked')){
-				//$('#setupprice').val(ui.item.shipping);
-			var p = Number( $("#form_shipping").attr('data-price') ) - Number( $("#form_shipping").attr('data-price') ) * 7 / 100;
+  $('#province').autocomplete({
+    source: function(request, response) {
+      $.ajax({
+        url : '?inc=stock_show-process&Mode=Province',
+        dataType : "json",
+        data : {
+          vehicle : $('#shipping_taxi').val()
+        },
+        success: function(data) {
+          response($.map(data, function(item) {
+            return {
+              label: item.label ,//group_id + "] " + item.group_name,
+              no:item.no,
+              value: item.value,
+              AMPHUR_ID:item.AMPHUR_ID,
+              PROVINCE_ID:item.PROVINCE_ID,
+              shipping:item.DELIVERY
+            }
+          }))
+        }
+      })
+    },
+//    source:
+    minLength: 0,
+    select: function( event, ui){
+      $('#hprovince').val(ui.item.PROVINCE_ID);
+      $('#amphur').attr('readonly',false).focus();
+    }
+  });
+      
+  $('#amphur').autocomplete({
+    source: function(request, response) {
+      $.ajax({
+        url: "?inc=stock_show-process&Mode=Amphur",
+        dataType: "json",
+        data: {
+          ref:$('#hprovince').val(),
+          vehicle : $('#shipping_taxi').val(),
+          office : ($('#motorbike').is(':checked') ?  $('#motorbike').attr('v-data') : $('#car').attr('v-data')),
+          term: request.term
+        },
+        success: function(data) {
+          response($.map(data, function(item) {
+            return {
+              label: item.label +'[' + item.AMP_NAME+' ราคา ' + item.DELIVERY +'บาท]',//group_id + "] " + item.group_name,
+              no:item.no,
+              value: item.value,
+              AMPHUR_ID:item.AMPHUR_ID,
+              shipping:item.DELIVERY,
+              delivery_no:item.DELIVERY_NO
+            }
+          }))
+        }
+      })
+    },
+    minLength: 0,
+    select: function( event, ui){
+      $('#hamphur').val(ui.item.AMPHUR_ID);
+      console.log('Return : '+ ui.item);
+      console.log('Ampur ID : '+ ui.item.AMPHUR_ID);
+      console.log('Shipping ID : '+ ui.item.DELIVERY + '[' + ui.item.shipping +']');
+      $('#form_shipping').attr('data-price',ui.item.shipping);
+      $('#hdelivery_no').val(ui.item.delivery_no);
+      if($('#form_shipping').is(':checked')){
+        //$('#setupprice').val(ui.item.shipping);
+      var p = Number( $("#form_shipping").attr('data-price') ) - Number( $("#form_shipping").attr('data-price') ) * 7 / 100;
             $('#setupprice').val( p );  
             $("#setupprice").attr("novat", $("#form_shipping").attr('data-price') );
 
             $.balloonsetGlobal.updateprice();
-					}
-					$('#shipp_detail').focus();
-					//console.log(hcode + '_2' + no);
-		}
-	});	
+          }
+          $('#shipp_detail').focus();
+          //console.log(hcode + '_2' + no);
+    }
+  }); 
 }
 
 
@@ -207,33 +207,33 @@ function cutmath( _num ){
 $(function(){
 
 
-	aj.jqueryUi();
-	
-	$('#send_date').datepicker({ dateFormat: "yy-mm-dd" });
-	$('#send_time').timepicker();
+  aj.jqueryUi();
+  
+  $('#send_date').datepicker({ dateFormat: "yy-mm-dd" });
+  $('#send_time').timepicker();
 
    $("#barcodeballoon").focus();
 
-   var  availableH      	= $(window).innerHeight()-105,
-  		headArea = $("#header-menu").height() + $("#header-logo").height() - 40;
-  		//tempiscroll;
+   var  availableH        = $(window).innerHeight()-105,
+      headArea = $("#header-menu").height() + $("#header-logo").height() - 40;
+      //tempiscroll;
 
-		allverticalscroll = [];
-		$(".thumbsgroup").each(function(i,e){
-			var ele = $(e);
+    allverticalscroll = [];
+    $(".thumbsgroup").each(function(i,e){
+      var ele = $(e);
             var tempiscroll;   
 
-			ele.height(availableH - headArea - 80);
+      ele.height(availableH - headArea - 80);
 
-			setTimeout(function(){
-				tempiscroll = new IScroll(e, {interactiveScrollbars:true ,scrollbars: true, preventDefaultException: { className: /(^|\s)textboxIncart|clickable(\s|$)/ }, mouseWheel: true});
+      setTimeout(function(){
+        tempiscroll = new IScroll(e, {interactiveScrollbars:true ,scrollbars: true, preventDefaultException: { className: /(^|\s)textboxIncart|clickable(\s|$)/ }, mouseWheel: true});
 
-				setInterval(function(){
-					tempiscroll.refresh();
-				}, 300);
-			}, 200);
-			
-		});
+        setInterval(function(){
+          tempiscroll.refresh();
+        }, 300);
+      }, 200);
+      
+    });
 
     $(".showhide").on("click", function(e){
         var _this = $(this);
@@ -254,7 +254,7 @@ $(function(){
 *
 */
 $(function(){
-	if($('#currentpage').val() == 'barcode'){
+  if($('#currentpage').val() == 'barcode'){
 
    /** Variable
    *
@@ -350,13 +350,13 @@ $(function(){
             _this.updateprice();
 
         }
-		
-		_this.hotkey = function(_key){
-			if(_key == 'APPEND' || _key == 'append'){
-				console.log(_key);
-				$('.btnBC.clickable.btnBC-plus:first()').trigger('click');
-			}
-		}
+    
+    _this.hotkey = function(_key){
+      if(_key == 'APPEND' || _key == 'append'){
+        console.log(_key);
+        $('.btnBC.clickable.btnBC-plus:first()').trigger('click');
+      }
+    }
         _this.loadballoon = function( _id ){
             var result = _this.isExist( _id );
             if( result.isEdit == false ){
@@ -364,10 +364,10 @@ $(function(){
             }else{
                 $.ajax({
                     url:"?inc=stock_show-getballoon",
-    				data:{'code' : _id},
+            data:{'code' : _id},
                     success:function(data){
-    					console.log(data);
-    					if(data != 'false'){
+              console.log(data);
+              if(data != 'false'){
                             var markup = parsehtmltoballoon(data);
                             markup.find(".runnumber").text( _set.length );
                             spaceforcontent.prepend(markup);
@@ -375,9 +375,9 @@ $(function(){
                             $(markup).css("opacity", 0).animate({"opacity": 1});
 
                             reindex();
-    					}else{
-    						alert('Not found this Design Code!! \nPlease try again');
-    					}
+              }else{
+                alert('Not found this Design Code!! \nPlease try again');
+              }
                     }
                 });
             }
@@ -391,7 +391,7 @@ $(function(){
             var _setupprice = Number( $("#setupprice").val() );
             var _t = cutmath(_this.getallprice());
             var _product_setup = _t + _setupprice;
-		        var totalprice = Number(Number(_t - (_t*0.07)).toFixed(2));
+            var totalprice = Number(Number(_t - (_t*0.07)).toFixed(2));
             var _discount, _afterdiscount;
 
 
@@ -448,7 +448,7 @@ $(function(){
            //    }
            //  });
 
-    		   
+           
 
 
         }
@@ -470,7 +470,7 @@ $(function(){
                 var tempset = [];
                 var obj = {
                     code: "",
-					quantity : "",
+          quantity : "",
                     mat : []
                 }
                 for(var a = 0 ; a < matset.length ; ++a){
@@ -545,7 +545,7 @@ $(function(){
                             + '</td>' 
                             + '<td class="col3">' 
                                 + '<div class="codewrap"><span>'+ opt.fullcode +'</span><br><div class="matTH">ชื่อวัสดุ</div></div>'
-								+ '<div class="codedetail">'+ opt.name +'</div>' 
+                + '<div class="codedetail">'+ opt.name +'</div>' 
                             + '</td>' 
                             + '<td class="col5"><span class="gas"><select class="clickable"><option value="Y" rel="'+  opt.pricegas  +'" '+ (opt.gas == 'Y' ? 'selected':'') +'>Yes</option><option value="N" rel="'+  opt.pricenogas  +'" '+ (opt.gas == 'N' ? 'selected':'') +'>No</option></select></span></td>' 
                             + '<td class="col4"><span class="price">'+ opt.price +'</span></td>' 
@@ -576,7 +576,7 @@ $(function(){
    */ 
    function balloon(_value){
        var _this = this;
-		    _this.materialset = [];
+        _this.materialset = [];
         _this.id = _value.id;
         _this.code = _value.code;
         _this.quantity = _value.quantity;
@@ -597,16 +597,16 @@ $(function(){
             _this.updateview();
         }
 
-		_this.addmaterial = function(_mat){
-			_this.materialset.push( _mat );
-		}
+    _this.addmaterial = function(_mat){
+      _this.materialset.push( _mat );
+    }
 
 
         _this.shownewslot = function(_id){
             var _temp;
             $.getJSON(
                // "module/barcode/json_material.json?clearcache="+Math.random(),
-			   "?inc=stock_show-process&Mode=ShownewSlot&id="+_id,
+         "?inc=stock_show-process&Mode=ShownewSlot&id="+_id,
                 function( data, textStatus, jqXHR ){
                     _this.isEdit = true;
                     _temp = make_mrk({
@@ -743,7 +743,7 @@ $(function(){
         
         init();
        
-	}
+  }
 
 
 
@@ -825,7 +825,7 @@ $(function(){
 
 
         // _this.getpricetotal = function(){
-        // 	return original.price * _this.quantity;
+        //  return original.price * _this.quantity;
         // }
         
         /**
@@ -875,7 +875,7 @@ $(function(){
         
 
         init();
-	}
+  }
 
     
     /** Function : 
@@ -967,12 +967,12 @@ $(function(){
     // var e = jQuery.Event("keydown")
     // e.which = 13 //choose the one you want
     $("#barcodeballoon").keydown(function(e){
-		
+    
         if( e.which == 13 && $(e.currentTarget).val().trim() == "" ){
-			var length = $(this).length;
-			console.log('Lenght key ' + length);
-		
-			$("#btn-save").trigger('click');
+      var length = $(this).length;
+      console.log('Lenght key ' + length);
+    
+      $("#btn-save").trigger('click');
            // window.location.href = "stock_show-print/75/printing.html";
         }
         else if( e.ctrlKey == true && e.which == 50 ){
@@ -1011,20 +1011,20 @@ $(function(){
    $("#promotion_dropdown").on("change", function(e){
       _balloonset.updateprice();
    });
-	var vehicle = function(office_no){
-		$.ajax({
-			type: 'GET',
-			url:'?inc=stock_show-process&Mode=Vehicle_list',
-			data:{'office'		:	office_no},
-			success:function(data){
-				$('#shipping_taxi').html(data);
-			}
-		});
-	}
+  var vehicle = function(office_no){
+    $.ajax({
+      type: 'GET',
+      url:'?inc=stock_show-process&Mode=Vehicle_list',
+      data:{'office'    : office_no},
+      success:function(data){
+        $('#shipping_taxi').html(data);
+      }
+    });
+  }
    $('#motorbike, #car').on('change', function(e){
       if( $('#motorbike').is(":checked") ){
-			vehicle($(this).attr('v-data'));
-		    $('#shipping_taxi').attr('title',$('#shipping_taxi :selected').text());
+      vehicle($(this).attr('v-data'));
+        $('#shipping_taxi').attr('title',$('#shipping_taxi :selected').text());
         $(".shippingprice").fadeIn();
         $("#province").blur();
         
@@ -1041,7 +1041,7 @@ $(function(){
       }
 
       if( $('#car').is(":checked") ){
-	  			vehicle($(this).attr('v-data'));
+          vehicle($(this).attr('v-data'));
 
         //$("#amphur, #province").val("");
         //$("#province").focus();
@@ -1059,7 +1059,7 @@ $(function(){
       _balloonset.updateprice();
    });
    $("#shipping_taxi").on("change", function(e){
-		$(this).attr('title',$('#shipping_taxi :selected').text());
+    $(this).attr('title',$('#shipping_taxi :selected').text());
         var p = Number( $("#shipping_taxi")[0].options[$("#shipping_taxi")[0].selectedIndex].getAttribute("taxi-price") ) - Number( $("#shipping_taxi")[0].options[$("#shipping_taxi")[0].selectedIndex].getAttribute("taxi-price") ) * 7 / 100;
         $('#setupprice').val( p );
 
@@ -1072,15 +1072,15 @@ $(function(){
             $('#province').focus();
             var p, novat;
             $('#form_getit').prop('checked', false);
-      			if(!$("#motorbike").is(':checked') && !$("#car").prop("checked")){
-      				$("#car").prop("checked",true);
-      				vehicle($('#car').attr('v-data'));
-      			}
+            if(!$("#motorbike").is(':checked') && !$("#car").prop("checked")){
+              $("#car").prop("checked",true);
+              vehicle($('#car').attr('v-data'));
+            }
             if( $("#motorbike").prop("checked") || $("#car").prop("checked") ){
                 p = Number( $("#shipping_taxi")[0].options[$("#shipping_taxi")[0].selectedIndex].getAttribute("taxi-price") ) - Number( $("#shipping_taxi")[0].options[$("#shipping_taxi")[0].selectedIndex].getAttribute("taxi-price") ) * 7 / 100;
                 novat = $("#shipping_taxi")[0].options[$("#shipping_taxi")[0].selectedIndex].getAttribute("taxi-price");
             }else if( $("#car").prop("checked") ){
-				        vehicle($(this).attr('v-data'));
+                vehicle($(this).attr('v-data'));
                 p = Number( $("#form_shipping").attr('data-price') ) - Number( $("#form_shipping").attr('data-price') ) * 7 / 100;
                 novat = $("#form_shipping").attr('data-price');
             }else{
@@ -1219,8 +1219,8 @@ $(function(){
     .on("click", ".balloonitem .rightcolumn .btnBC-plus", function(e){
         var _this = $(this);
         var _id = _this.closest(".balloonitem").attr("index");
-		$('#barcodeindex').val(_id);
-		$('#barcodematerial').focus();
+    $('#barcodeindex').val(_id);
+    $('#barcodematerial').focus();
         //focusToBarcode();
 
         openoverlay( _id );
@@ -1264,30 +1264,30 @@ $(function(){
     $("#btnsubmit")
     .on("click", function(e){
         var _str = $('#barcodeballoon').val().trim();
-		if( _str != ''){
+    if( _str != ''){
             if( _str.isTH() ){
                 _str = _str.convertToEN();
             }
-			if(_str.length >= 11){
+      if(_str.length >= 11){
             _balloonset.loadballoon( _str );
-			console.log('Lenght : ' + _str.length);
-			}else{
-				_balloonset.hotkey(_str);
-				console.log('STR : ' + _str);
-				console.log('Lenght : ' + _str.length);
-			}
+      console.log('Lenght : ' + _str.length);
+      }else{
+        _balloonset.hotkey(_str);
+        console.log('STR : ' + _str);
+        console.log('Lenght : ' + _str.length);
+      }
             e.preventDefault();
-    		$('#barcodeballoon').val('');
-		}else{
-			e.preventDefault();
-			return false;
-		}
+        $('#barcodeballoon').val('');
+    }else{
+      e.preventDefault();
+      return false;
+    }
         focusToBarcode();
     });
-	
-	$('#barcodeballoon').autocomplete({
+  
+  $('#barcodeballoon').autocomplete({
     
-		source:'?inc=stock_show-process&Mode=balloonSearch',
+    source:'?inc=stock_show-process&Mode=balloonSearch',
     // source:[
     //     {
     //       image: "images/Materials/1412589876.jpg",
@@ -1298,66 +1298,66 @@ $(function(){
     //     }
 
     // ],
-		minLength: 0,
-		select: function( event, ui){
-			//_balloonset.loadballoon(ui.item.value);
-			$('#barcodeballoon').val(ui.item.value);				
-			$("#btnsubmit").trigger('click');
-			
-		},
-			close: function( event, ui ) {
-				$('#barcodeballoon').val('');				
-			}
-	}).data( "ui-autocomplete" )._renderItem =  function( ul, item ) {
-		var inner_html = '<a><div class="list_item_container"><div class="image"><img src="' + item.image + '" style="width:120px"/></div><div class="txt"><div class="label"><b>Design Code : </b>' + item.key + '</div></div></div></a>';
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append(inner_html)
-			.appendTo( ul );
-	};
+    minLength: 0,
+    select: function( event, ui){
+      //_balloonset.loadballoon(ui.item.value);
+      $('#barcodeballoon').val(ui.item.value);        
+      $("#btnsubmit").trigger('click');
+      
+    },
+      close: function( event, ui ) {
+        $('#barcodeballoon').val('');       
+      }
+  }).data( "ui-autocomplete" )._renderItem =  function( ul, item ) {
+    var inner_html = '<a><div class="list_item_container"><div class="image"><img src="' + item.image + '" style="width:120px"/></div><div class="txt"><div class="label"><b>Design Code : </b>' + item.key + '</div></div></div></a>';
+    return $( "<li></li>" )
+      .data( "item.autocomplete", item )
+      .append(inner_html)
+      .appendTo( ul );
+  };
 
-	$('#barcodematerial').autocomplete({
-		source:'?inc=stock_show-process&Mode=MaterialsSearch',
-		minLength: 0,
-		select: function( event, ui){
-			//var ball = new balloon();//_balloonset.loadballoon(ui.item.value);
-			//$('#barcodematerial').val(ui.item.value);
-			 _balloonset.getballoon( Number( $('#barcodeindex').val() ) ).shownewslot(ui.item.no);
-			$("#btnsubmit").trigger('click');
-		},
-			close: function( event, ui ) {
-				$('#barcodematerial').val('');
-					$(".overlay").trigger('click');
-				
-			}
-	}).data( "ui-autocomplete" )._renderItem =  function( ul, item ) {
-		var inner_html = '<a><div class="list_item_container"><div class="image"><img src="' + item.image + '" style="width:120px"/><div class="lnclear"></div><div class="txt"><div class="label"><b>Design ID : </b>' + item.value + '</div><div class="description"><b>Detail : </b>' + item.key + '</div></div></div></div></a>';
-		return $( "<li></li>" )
-			.data( "item.autocomplete", item )
-			.append(inner_html)
-			.appendTo( ul );
-	};
-	
-	$('#barcodematerial').on('keypress',function(e){
-		console.log('Press Key : ' + e.which);
-		if(e.which == 13 && $(this).val() != ''){
-			$.get('?inc=stock_show-process&Mode=chkMaterials',{'code':$(this).val()},function(data){
-				var res = $.parseJSON(data);
-				console.log('Result : '+ res.no);
-				
-				if(res.no != 'false'){
-					_balloonset.getballoon( Number( $('#barcodeindex').val() ) ).shownewslot(res.no);
-					$('#barcodematerial').val('');
-					$(".overlay").trigger('click');
-					$('#barcodeballoon').val('').focus();
-				}else{
-					alert('Not found this Materials Code!! \nPlease try again');
-					$('#barcodematerial').val('').focus();
-				}
-				
-			});
-		}
-	});
+  $('#barcodematerial').autocomplete({
+    source:'?inc=stock_show-process&Mode=MaterialsSearch',
+    minLength: 0,
+    select: function( event, ui){
+      //var ball = new balloon();//_balloonset.loadballoon(ui.item.value);
+      //$('#barcodematerial').val(ui.item.value);
+       _balloonset.getballoon( Number( $('#barcodeindex').val() ) ).shownewslot(ui.item.no);
+      $("#btnsubmit").trigger('click');
+    },
+      close: function( event, ui ) {
+        $('#barcodematerial').val('');
+          $(".overlay").trigger('click');
+        
+      }
+  }).data( "ui-autocomplete" )._renderItem =  function( ul, item ) {
+    var inner_html = '<a><div class="list_item_container"><div class="image"><img src="' + item.image + '" style="width:120px"/><div class="lnclear"></div><div class="txt"><div class="label"><b>Design ID : </b>' + item.value + '</div><div class="description"><b>Detail : </b>' + item.key + '</div></div></div></div></a>';
+    return $( "<li></li>" )
+      .data( "item.autocomplete", item )
+      .append(inner_html)
+      .appendTo( ul );
+  };
+  
+  $('#barcodematerial').on('keypress',function(e){
+    console.log('Press Key : ' + e.which);
+    if(e.which == 13 && $(this).val() != ''){
+      $.get('?inc=stock_show-process&Mode=chkMaterials',{'code':$(this).val()},function(data){
+        var res = $.parseJSON(data);
+        console.log('Result : '+ res.no);
+        
+        if(res.no != 'false'){
+          _balloonset.getballoon( Number( $('#barcodeindex').val() ) ).shownewslot(res.no);
+          $('#barcodematerial').val('');
+          $(".overlay").trigger('click');
+          $('#barcodeballoon').val('').focus();
+        }else{
+          alert('Not found this Materials Code!! \nPlease try again');
+          $('#barcodematerial').val('').focus();
+        }
+        
+      });
+    }
+  });
 
 
     /** Add EventListener
@@ -1369,43 +1369,43 @@ $(function(){
         console.log( _balloonset.getallcode() );
         e.preventDefault();
 
-		if(confirm('Please Confirm to success sell')){
+    if(confirm('Please Confirm to success sell')){
       openoverlayblock();
 
-		$.ajax({
-			type: 'POST',
-			url:'?inc=stock_show-process&Mode=Sell',
-			data:{'blist':_balloonset.getallcode()
-					,'cust_id'		:	$('#cust_id').val()
-					,'form_getit'	:	($('#form_getit').prop('checked') ? 'Y':'N')
-					,'form_shipping':	($('#form_shipping').prop('checked') ? 'Y':'N')
-					,'form_shipping_type' :	($('#motorbike').prop('checked') ? 'taxi':($('#car').prop('checked') ? 'car':''))
-					,'form_shipping_taxi_price'	:	$('#shipping_taxi :selected').attr('taxi-price')
-					,'delivery_no'	:	$('#hdelivery_no').val()
-					,'ref_delivery_no'			:	$('#shipping_taxi').val()
-					,'form_shipping_car_price'	:	$('#form_shipping').attr('data-price')
-					,'form_discount':	$('#discount').val()
-					,'ref_promotion_no':	$('#promotion_dropdown :selected').val()
-					,'promotion'	:	$('#promotion_dropdown :selected').text()
-					,'form_setup'	:	($('#form_setup').prop('checked') ? 'Y':'N')
-					,'send_date'	:	$('#send_date').val()
-					,'send_time'	:	$('#send_time').val()
-					,'hprovince'	:	$('#hprovince').val()
-					,'hamphur'		:	$('#hamphur').val()
-					,'shipp_detail'	:	$('#shipp_detail').val()
-					,'customer'		:	$('#header_customer').find('input, textarea').serialize()
-				},
-			success:function(data){
-				console.log(data);
-				var formID = JSON.parse(data);
-				console.log(formID.id);
-				window.location = 'stock_show-print/'+formID.id+'/printing.html';
-			},
+    $.ajax({
+      type: 'POST',
+      url:'?inc=stock_show-process&Mode=Sell',
+      data:{'blist':_balloonset.getallcode()
+          ,'cust_id'    : $('#cust_id').val()
+          ,'form_getit' : ($('#form_getit').prop('checked') ? 'Y':'N')
+          ,'form_shipping': ($('#form_shipping').prop('checked') ? 'Y':'N')
+          ,'form_shipping_type' : ($('#motorbike').prop('checked') ? 'taxi':($('#car').prop('checked') ? 'car':''))
+          ,'form_shipping_taxi_price' : $('#shipping_taxi :selected').attr('taxi-price')
+          ,'delivery_no'  : $('#hdelivery_no').val()
+          ,'ref_delivery_no'      : $('#shipping_taxi').val()
+          ,'form_shipping_car_price'  : $('#form_shipping').attr('data-price')
+          ,'form_discount': $('#discount').val()
+          ,'ref_promotion_no':  $('#promotion_dropdown :selected').val()
+          ,'promotion'  : $('#promotion_dropdown :selected').text()
+          ,'form_setup' : ($('#form_setup').prop('checked') ? 'Y':'N')
+          ,'send_date'  : $('#send_date').val()
+          ,'send_time'  : $('#send_time').val()
+          ,'hprovince'  : $('#hprovince').val()
+          ,'hamphur'    : $('#hamphur').val()
+          ,'shipp_detail' : $('#shipp_detail').val()
+          ,'customer'   : $('#header_customer').find('input, textarea').serialize()
+        },
+      success:function(data){
+        console.log(data);
+        var formID = JSON.parse(data);
+        console.log(formID.id);
+        window.location = 'stock_show-print/'+formID.id+'/printing.html';
+      },
        error: function(xhr, status, error) {
           $(".overlay .error").show();
        }
-		});
-		}
+    });
+    }
     }); 
 
 
@@ -1421,7 +1421,7 @@ $(function(){
         }
     });
 
-	
+  
     // $("body, input[type='text'], textarea, #barcodeballoon, #cust_name").keypress(function(e){
     //     key = e.charCode;
     // })
@@ -1439,85 +1439,85 @@ $(function(){
     // .keyup(function(e){
     //     key = "";
     // });
-	}
-	if($('#currentpage').val() == 'print'){
-	setTimeout(function(){
-		window.print();
-	}, 500);
+  }
+  if($('#currentpage').val() == 'print'){
+  setTimeout(function(){
+    window.print();
+  }, 500);
     $("body").keydown(function(e){
-		 var code = e.keyCode || e.which;
-		if(code == 27) { //Enter keycode
-		   //Do something
-			window.location="stock_show.html";
-			//alert('Key : ' + code);
-		 }
-		 console.log('Key : ' + code);
-	});
-	}
-	if($('#currentpage').val()=='frmLocation'){
-		var amphur = function(province){
-			$.ajax({
-				type: 'GET',
-				url:'?inc=stock_show-process&Mode=ListAmphur',
-				data:{'province':$('#select-province').val()},
-				success:function(data){
-					$('#select-amphur').html(data);
-				}
-			});
-			
-		}
-		$('#select-province').on('change',function(){
-			amphur($(this).val());
-			$('#txt-location').val('');
-		});
-		
-		amphur($('#select-province').val());
-		$('#txt-location').autocomplete({
-			source: function(request, response) {
-				$.ajax({
-					url: "?inc=stock_show-process&Mode=ChkLocation",
-					dataType: "json",
-					data: {
-						province:$('#select-province').val(),
-						amphur : $('#select-amphur').val(),
-						term: request.term
-					},
-					success: function(data) {
-						response($.map(data, function(item) {
-							return {
-								label: item.label,
-								no:item.no,
-								value: item.value,
-								AMPHUR_ID:item.AMPHUR_ID,
-								shipping:item.DELIVERY
-							}
-						}))
-					}
-				})
-			},
-			minLength: 0,
-			select: function( event, ui){
-				$('#h-location').val(ui.item.AMPHUR_ID);
-			}
-		});	
-		$('.BtnSave').on('click',function(e){
-			e.preventDefault();
-			$.ajax({
-				type: 'POST',
-				url:'?inc=stock_show-process&Mode=locationSave',
-				data:{'data':$('form').serialize()},
-				success:function(data){
-					console.log(data);
-					var pr = JSON.parse(data);
-					console.log('Province ' + pr.province);
-						parent.$('#hprovince').val(pr.hprovince);
-						parent.$('#hamphur').val(pr.hamphur);
-						
-						parent.$('#province').val(pr.province);
-						parent.$('#amphur').val(pr.amphur);
-						parent.$.colorbox.close();
-				}
-			});
-		});
-	}
+     var code = e.keyCode || e.which;
+    if(code == 27) { //Enter keycode
+       //Do something
+      window.location="stock_show.html";
+      //alert('Key : ' + code);
+     }
+     console.log('Key : ' + code);
+  });
+  }
+  if($('#currentpage').val()=='frmLocation'){
+    var amphur = function(province){
+      $.ajax({
+        type: 'GET',
+        url:'?inc=stock_show-process&Mode=ListAmphur',
+        data:{'province':$('#select-province').val()},
+        success:function(data){
+          $('#select-amphur').html(data);
+        }
+      });
+      
+    }
+    $('#select-province').on('change',function(){
+      amphur($(this).val());
+      $('#txt-location').val('');
+    });
+    
+    amphur($('#select-province').val());
+    $('#txt-location').autocomplete({
+      source: function(request, response) {
+        $.ajax({
+          url: "?inc=stock_show-process&Mode=ChkLocation",
+          dataType: "json",
+          data: {
+            province:$('#select-province').val(),
+            amphur : $('#select-amphur').val(),
+            term: request.term
+          },
+          success: function(data) {
+            response($.map(data, function(item) {
+              return {
+                label: item.label,
+                no:item.no,
+                value: item.value,
+                AMPHUR_ID:item.AMPHUR_ID,
+                shipping:item.DELIVERY
+              }
+            }))
+          }
+        })
+      },
+      minLength: 0,
+      select: function( event, ui){
+        $('#h-location').val(ui.item.AMPHUR_ID);
+      }
+    }); 
+    $('.BtnSave').on('click',function(e){
+      e.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url:'?inc=stock_show-process&Mode=locationSave',
+        data:{'data':$('form').serialize()},
+        success:function(data){
+          console.log(data);
+          var pr = JSON.parse(data);
+          console.log('Province ' + pr.province);
+            parent.$('#hprovince').val(pr.hprovince);
+            parent.$('#hamphur').val(pr.hamphur);
+            
+            parent.$('#province').val(pr.province);
+            parent.$('#amphur').val(pr.amphur);
+            parent.$.colorbox.close();
+        }
+      });
+    });
+  }
 });
