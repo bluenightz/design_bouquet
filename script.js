@@ -5,7 +5,7 @@ Snap.plugin(function (Snap, Element, Paper, global, Fragment) {
         var W = 80, H = 78;
         var bbox = this.getBBox();
         var rectL, rectR, rotatetemp;
-        //var mbbox = $.svgObj.svgBox.getBBox();
+        //var mbbox = $.svgObj.svgBox.getBBox(); 
 
         //var initx = ( bbox.w / 2 ) - ((( W * 2 )+10) / 2);
         var initx = $.svgObj.w - 10;
