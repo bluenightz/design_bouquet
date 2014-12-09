@@ -1,3 +1,4 @@
+// add comment
 Snap.plugin(function (Snap, Element, Paper, global, Fragment) {
     //Snap.newmethod = function () {};
     Element.prototype._RotationBox = null;
@@ -288,7 +289,7 @@ aj.auto_customer = function(){
 				}
 			});	
 }
-
+// add comment
 function cutmath( _num ){
 
     var r = Math.round(_num * 100) / 100
