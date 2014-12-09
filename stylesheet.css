@@ -19,7 +19,7 @@
 }
 #barcode .title_bar,
 .thumbspace.popup .thumbsgroup .thumbbox .thumbcrop  {
-	width: 100%;
+	width: 99%;
 	margin: 0 auto;
 }
 .thumbspace.popup .thumbsgroup .thumbbox .thumbcrop {
@@ -175,9 +175,6 @@
 }
 .btnBC-delete{
 	background:url(img/cross.png) no-repeat;
-}
-.btnBC-dash {
-	background: url(img/dash.png) no-repeat;
 }
 .btnBC-plus{
 	background:url(img/plus.png) no-repeat;
@@ -405,39 +402,6 @@
 #header_detail, #pricebox {
 	display: block !important;
 }
-#shipping label{
-	display:inline;
-	font-size: 12px;
-}
-div.titleform {
-	display: block;
-	width: auto;
-	float: left;
-	margin-right: 6px;
-}
-div#header_customer .formcontrol ,
-div#quotation_detail .formcontrol{
-	display: block;
-	overflow: hidden;
-}
-#header_customer .titleform {
-width: auto;
-min-width: 40px;
-}
-.shippingbox{
-	display: none;
-}
-#pricebox #shipping{background:#fff; width:98%; float:left; border:1px solid #231F20; border-radius:4px; overflow:hidden; }
-#pricebox #shipping .nofloat{
-	float:none;
-	width:auto;
-}
-#pricebox #shipping ul{clear:both; float:none; margin:2px; padding:0px; list-style:none;}
-#pricebox #shipping ul li{float:left; margin:4px; padding:2px 10px 2px 2px; font-size:12px;}
-#pricebox #shipping ul li span{display:block; width:90px; float:left; margin-right:10px;}
-#pricebox #shipping  #bank{clear:both; float:none; margin-top:10px;padding:4px 0; position:relative;}
-#pricebox #shipping  input[type=text]{width:60%;margin:0;padding:2px; font-size:12px;}
-
 .hidden{
 	visibility: hidden;
 }
@@ -501,28 +465,3 @@ li.ui-menu-item {
     
 }
 /* autocomplete */
-
-
-.thumbspace.popup .thumbsgroup.col-left{
-    width:30% !important;
-}
-.col-right{
-    width:35%;
-    overflow:auto;
-    float:left;margin-left: 5px;
-    margin-right: 5px;
-}
-.billcolumn{
-    position: relative;
-    overflow: hidden;
-}
-.title-receipt {
-    display:block;
-    float:left;
-    margin-left:10px;
-    margin-right:5px;
-}
-.inputwrapper-receipt{
-    position:relative;
-    overflow:hidden;
-}
