@@ -1,0 +1,11 @@
+{
+	"material":{
+		"id":"001",
+		"fullcode":"AFA24477000",
+		"name":"Happy Birthday Striped Cupcake",
+		"price":"100",
+		"quantity":"5",
+		"img":"http://www.balloonoffice.com/images/Materials/1407122160.jpg",
+		"stock":"30"
+	}
+}
