@@ -232,7 +232,7 @@ aj.auto_customer = function(){
 			$('#cust_fax').val(ui.item.customer_fax);
 		}
 	});
-	
+	Math.max(1,2,3,4);
 	$('#cust_mobile').autocomplete({
 		source:'?inc=index-process&Mode=AutoTel',
 		minLength: 1,
@@ -426,7 +426,7 @@ $(function(){
         }
 
    }
-
+   Math.max(1,2,3,4);
    function swapitem(_array, start, target){
         var a = _array //[0,1,2,3,4]; // [0,null,2,3,4];
         var item = a.splice(start, 1);
